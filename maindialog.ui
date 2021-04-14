@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDialog</class>
+ <widget class="QDialog" name="MainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>514</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <italic>false</italic>
+    <underline>false</underline>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>串口调试助猫</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="logo.qrc">
+    <normaloff>:/new/prefix1/mao.png</normaloff>:/new/prefix1/mao.png</iconset>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>631</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>接收框</string>
+   </property>
+   <widget class="QTextEdit" name="reBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>611</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+    </property>
+   </widget>
+   <zorder>reBox</zorder>
+   <zorder>trBox</zorder>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>721</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>发送框</string>
+   </property>
+   <widget class="QTextEdit" name="trBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>691</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>80</y>
+     <width>241</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="settingLayout" rowstretch="0,0,0,0,0" columnstretch="3,4" rowminimumheight="2,3,2,3,0">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>10</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>30</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="bote">
+      <property name="text">
+       <string>波特率</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="shuju">
+      <property name="text">
+       <string>数据位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="jiaoyan">
+      <property name="text">
+       <string>校验位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="tingzhi">
+      <property name="text">
+       <string>停止位</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="kaiguan">
+      <property name="text">
+       <string>串口开关</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="baudNum">
+      <item>
+       <property name="text">
+        <string>9600</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>115200</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="stop">
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="checkNum">
+      <item>
+       <property name="text">
+        <string>无</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>奇</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>偶</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="dataNum">
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="serialOperate">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>打开串口</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="serial_search">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>30</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>串口检测</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="serialPorts">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>30</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearTBox">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>360</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空接收</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="risHex">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>360</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>16位显示</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="transButton">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>420</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>发送</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="tIsHex">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>480</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>16进制</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="enter">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>480</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>换行</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="chartCheck">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>380</y>
+     <width>91</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>显示图表</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>520</y>
+     <width>721</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="chartLayout"/>
+  </widget>
+  <widget class="QPushButton" name="chartclear">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>520</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空表</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

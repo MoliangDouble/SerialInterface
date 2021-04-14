@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file alias="mao">mao.ico</file>
+        <file>mao.png</file>
+        <file>QQ图片20200107163441.jpg</file>
+        <file>mao_copy.ico</file>
+    </qresource>
+</RCC>
